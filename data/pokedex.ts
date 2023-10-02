@@ -19580,4 +19580,17 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		gen: 5,
 	},
+	maurios: {
+		num: -5081,
+		name: "Maurios",
+		types: ["Fighting", "Fairy"],
+		gender: "M",
+		baseStats: {hp: 105, atk: 145, def: 80, spa: 50, spd: 100, spe: 40},
+		abilities: {0: "Heavy Hands"},
+		heightm: 1.85,
+		weightkg: 100,
+		color: "White",
+		eggGroups: ["Undiscovered"],
+		gen: 1,
+	},
 };

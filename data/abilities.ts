@@ -5347,4 +5347,18 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 3,
 		num: -4,
 	},
+	heavyhands: {
+		onSourceDamagingHit(damage, target, source, move) {
+			if (!move.flags['slap']) return; 
+			// Despite not being a secondary, Shield Dust / Covert Cloak block Toxic Chain's effect
+			if (target.hasAbility('shielddust') || target.hasItem('covertcloak')) return;
+
+			if (this.randomChance(3, 10)) {
+				target.trySetStatus('slp', source);
+			}
+		},
+		name: "Heavy Hands",
+		rating: 4.5,
+		num: 8001,
+	},
 };

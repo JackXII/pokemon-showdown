@@ -5,6 +5,7 @@
   "main": "dist/sim/index.js",
   "dependencies": {
     "esbuild": "^0.16.10",
+    "latest": "^0.2.0",
     "preact": "^10.5.15",
     "preact-render-to-string": "^5.1.19",
     "probe-image-size": "^5.0.0",
@@ -29,7 +30,7 @@
     "node": ">=14.0.0"
   },
   "scripts": {
-    "start": "node pokemon-showdown start",
+    "start": "node pokemon-showdown start -o",
     "build": "node build",
     "tsc": "tsc",
     "fast-lint": "eslint . --config .eslintrc-no-types.json --cache --cache-location .eslintcache-no-types --ext .js,.ts,.tsx",
