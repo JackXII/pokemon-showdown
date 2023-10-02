@@ -19581,7 +19581,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		gen: 5,
 	},
 	maurios: {
-		num: -5081,
+		num: -8001,
 		name: "Maurios",
 		types: ["Fighting", "Fairy"],
 		gender: "M",

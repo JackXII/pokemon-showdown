@@ -2220,4 +2220,9 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 
 		activate: "  [POKEMON] extends [MOVE] by 2 turns!",
 	},
+	heavyhands: {
+		name: "Heavy Hands",
+		desc: "This Pokemon's slap moves have a 30% chance of falling asleep. This effect comes after a move's inherent secondary effect chance.",
+		shortDesc: "This Pokemon's slap moves have a 30% chance of sleep.",
+	},
 };

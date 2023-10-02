@@ -520,7 +520,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Arm Thrust",
 		pp: 20,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, slap: 1},
 		multihit: [2, 5],
 		secondary: null,
 		target: "normal",
@@ -623,7 +623,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Assurance",
 		pp: 10,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, slap: 1},
 		secondary: null,
 		target: "normal",
 		type: "Dark",
@@ -4001,7 +4001,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Double Slap",
 		pp: 10,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, slap: 1},
 		multihit: [2, 5],
 		secondary: null,
 		target: "normal",
@@ -5104,7 +5104,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Fake Out",
 		pp: 10,
 		priority: 3,
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, slap: 1},
 		onTry(source) {
 			if (source.activeMoveActions > 1) {
 				this.hint("Fake Out only works on your first turn out.");
@@ -6096,7 +6096,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Force Palm",
 		pp: 10,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, slap: 1},
 		secondary: {
 			chance: 30,
 			status: 'par',
@@ -10096,7 +10096,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Knock Off",
 		pp: 20,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, slap: 1},
 		onBasePower(basePower, source, target, move) {
 			const item = target.getItem();
 			if (!this.singleEvent('TakeItem', item, target.itemState, target, target, move, item)) return;
@@ -12607,7 +12607,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Mud-Slap",
 		pp: 10,
 		priority: 0,
-		flags: {protect: 1, mirror: 1},
+		flags: {protect: 1, mirror: 1, slap: 1},
 		secondary: {
 			chance: 100,
 			boosts: {
@@ -14719,7 +14719,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Quash",
 		pp: 15,
 		priority: 0,
-		flags: {protect: 1, mirror: 1},
+		flags: {protect: 1, mirror: 1, slap: 1},
 		onHit(target) {
 			if (this.activePerHalf === 1) return false; // fails in singles
 			const action = this.queue.willMove(target);
@@ -20905,7 +20905,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Wake-Up Slap",
 		pp: 10,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, slap: 1},
 		onHit(target) {
 			if (target.status === 'slp') target.cureStatus();
 		},
