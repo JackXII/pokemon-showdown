@@ -96625,6 +96625,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			bulldoze: ["9L1"],
 			dazzlinggleam: ["9L1"],
 			defensecurl: ["9L1"],
+			dig: ["9L1"],
 			doubleslap: ["9L1"],
 			drainpunch: ["9L1"],
 			earthquake: ["9L1"],
