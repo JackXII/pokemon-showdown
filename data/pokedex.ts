@@ -19592,6 +19592,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Brown",
 		evos: ["Expersum"],
 		eggGroups: ["Monster", "Grass"],
+		gen: 21,
 	},
 	expersum: {
 		num: -2002,
@@ -19605,6 +19606,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Green",
 		evos: ["Gastronaut"],
 		eggGroups: ["Monster", "Grass"],
+		gen: 21,
 	},
 	gastronaut: {
 		num: -2003,
@@ -19617,7 +19619,8 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		weightkg: 130.61,
 		color: "Brown",
 		eggGroups: ["Monster", "Grass"],
-	},
+		gen: 21,
+		},
 	maurios: {
 		num: -8001,
 		name: "Maurios",
