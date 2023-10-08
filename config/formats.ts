@@ -28,7 +28,7 @@ export const Formats: FormatList = [
 		section: "Mazah Doubles",
 	},
 	{
-		name: "[Gen 21] [Mazah] VGC Like",
+		name: "[Gen 21] VGC Like",
 		mod: 'gen9predlc',
 		gameType: 'doubles',
 		searchShow: false,
