@@ -6147,4 +6147,16 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		isNonstandard: "Custom",
 		tier: "Illegal",
 	},
+	mollucotta: {
+		isNonstandard: "Custom",
+		tier: "CAP",
+	},
+	expersum: {
+		isNonstandard: "Custom",
+		tier: "CAP",
+	},
+	gastronaut: {
+		isNonstandard: "Custom",
+		tier: "CAP",
+	},
 };

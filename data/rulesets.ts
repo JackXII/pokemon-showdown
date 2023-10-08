@@ -2667,4 +2667,20 @@ export const Rulesets: {[k: string]: FormatData} = {
 			return value;
 		},
 	},
+	mazahpokedex: {
+		effectType: 'ValidatorRule',
+		name: 'Mazah Pokedex',
+		desc: "Only allows Pok&eacute;mon native to the Mazah region (Youtuber Subjectively)",
+		banlist: [],
+		onValidateSet(set, format) {
+			const mazahDex = [
+				"Mollucotta","Gastronaut","Expersum",
+			];
+			const species = this.dex.species.get(set.species || set.name);
+			if (!mazahDex.includes(species.baseSpecies) && !mazahDex.includes(species.name) &&
+				!this.ruleTable.has('+' + species.id)) {
+				return [`${species.baseSpecies} is not in the Mazah Pokédex.`];
+			}
+		},
+	},
 };

@@ -3767,6 +3767,15 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	pokestarufopropu2: {
 		name: "Pokestar UFO-PropU2",
 	},
+	mollucotta: {
+		name: "Mollucotta",
+	},
+	expersum: {
+		name: "Expersum",
+	},
+	gastronaut: {
+		name: "Gastronaut",
+	},
 	maurios: {
 		name: "Maurios",
 	},

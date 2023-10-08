@@ -21,7 +21,19 @@ export const Formats: FormatList = [
 
 	// S/V Singles
 	///////////////////////////////////////////////////////////////////
-
+	{
+		section: "Mazah Singles",
+	},
+	{
+		section: "Mazah Doubles",
+	},
+	{
+		name: "[Mazah] VGC Like",
+		mod: 'gen9predlc',
+		gameType: 'doubles',
+		searchShow: false,
+		ruleset: ['Flat Rules', '!! Adjust Level = 50', 'Min Source Gen = 9', 'VGC Timer', 'Open Team Sheets', 'Mazah Pokedex'],
+	},
 	{
 		section: "S/V Singles",
 	},
