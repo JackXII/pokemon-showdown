@@ -32,7 +32,9 @@ export const Formats: FormatList = [
 		mod: 'gen9predlc',
 		gameType: 'doubles',
 		searchShow: false,
-		ruleset: ['Flat Rules', '!! Adjust Level = 50', 'Mazah Pokedex','Min Source Gen = 9', 'VGC Timer', 'Open Team Sheets'],
+		banlist: ['Past'],
+		unbanlist: ['All Pokemon'],
+		ruleset: ['Flat Rules', '!! Adjust Level = 50', 'Mazah Pokedex','Min Source Gen = 21', 'VGC Timer', 'Open Team Sheets'],
 	},
 	{
 		section: "S/V Singles",
