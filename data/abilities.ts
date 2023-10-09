@@ -5371,6 +5371,14 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		},
 		num: 2000,
 	},
+	fierydancer: {
+		name: "Fiery Dancer",
+		onAfterMove(source, target, move) {
+			if(move.flags['dance'])	{
+				this.boost({spa: 1}, target, source, null, false, true);
+			}
+		},
+	},
 	shimmer: {
 		// Mazah
 		onDamagingHit(damage, target, source, move) {
@@ -5381,7 +5389,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		},
 		name: "Shimmer",
 		rating: 2,
-		num: 2001,
+		num: 2003,
 	},
 	grimtears: {
 		// Mazah
@@ -5397,7 +5405,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		},
 		name: "Grim Tears",
 		rating: 3.5,
-		num: 2002,
+		num: 2004,
 	},
 	momentum: {
 		// Mazah
@@ -5436,6 +5444,6 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				return this.chainModify([dmgMod[numConsecutive], 4096]);
 			},
 		},
-		num: 2003,
+		num: 2005,
 	},
 };
