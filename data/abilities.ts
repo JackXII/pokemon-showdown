@@ -5364,8 +5364,8 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	rustinggrowth: {
 		// Mazah, Jack-Made
 		name: "Rusting Growth",
-		onEffectiveness(typeMod, target, type, move) {
-			if(move.type === 'Grass' && type === 'Steel') {
+		onFoeEffectiveness(typeMod, target, type, move) {
+			if(move.type === 'Grass' && type === 'Steel'){
 				return 1;
 			}
 		},
