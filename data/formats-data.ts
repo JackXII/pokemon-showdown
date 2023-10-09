@@ -6159,4 +6159,16 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		isNonstandard: "Custom",
 		tier: "CAP",
 	},
+	quetzalil: {
+		isNonstandard: "Custom",
+		tier: "CAP",
+	},
+	quexcell: {
+		isNonstandard: "Custom",
+		tier: "CAP",
+	},
+	quetzillian: {
+		isNonstandard: "Custom",
+		tier: "CAP",
+	},
 };

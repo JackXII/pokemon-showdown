@@ -3776,6 +3776,15 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	gastronaut: {
 		name: "Gastronaut",
 	},
+	quetzalil: {
+		name: "Quetzalil",
+	},
+	quexcell: {
+		name: "Quexcell",
+	},
+	quetzillian: {
+		name: "Quetzillian",
+	},
 	maurios: {
 		name: "Maurios",
 	},

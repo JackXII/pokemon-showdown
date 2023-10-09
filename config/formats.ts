@@ -32,8 +32,6 @@ export const Formats: FormatList = [
 		mod: 'gen9predlc',
 		gameType: 'doubles',
 		searchShow: false,
-		banlist: ['All Pokemon'],
-		unbanlist: ["Mollucotta","Gastronaut","Expersum",],
 		ruleset: ['Flat Rules', '!! Adjust Level = 50', 'Mazah Pokedex','Min Source Gen = 21', 'VGC Timer', 'Open Team Sheets'],
 	},
 	{

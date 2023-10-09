@@ -2225,4 +2225,40 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		desc: "This Pokemon's slap moves have a 30% chance of falling asleep. This effect comes after a move's inherent secondary effect chance.",
 		shortDesc: "This Pokemon's slap moves have a 30% chance of sleep.",
 	},
+	rustinggrowth: {
+		// Mazah, Jack-Made
+		name: "Rusting Growth",
+		desc: "This Pokemon's Grass moves are super effective against Steel type.",
+		shortDesc: "This Pokemon's Grass moves are super effective against Steel type.",
+	},
+	fierydancer: {
+		// Mazah, Jack-Made
+		name: "Fiery Dancer",
+		desc: "When this Pokemon use a dance move, its Sp. Attack raises by 1 stage.",
+		shortDesc: "When this Pokemon use a dance move, its Sp. Attack raises by 1 stage.",
+	},
+	airbubble: {
+		name: "Air Bubble",
+		desc: "This Pokemon's offensive stat is doubled while using a Flying-type attack. If a Pokemon uses a Ground-type attack against this Pokemon, that Pokemon's offensive stat is halved when calculating the damage to this Pokemon. This Pokemon is immune to powder moves, damage from Sandstorm, and the effects of Rage Powder and the Effect Spore Ability.",
+		shortDesc: "This Pokemon's Flying power is 2x; it is immune to powder moves, Sandstorm damage, and Effect Spore; Ground power against it is halved.",
+	},
+	shimmer: {
+		// Mazah
+		name: "Shimmer",
+		desc: "Pokemon making contact with this Pokemon have their Accuracy lowered by 1 stage.",
+		shortDesc: "Pokemon making contact with this Pokemon have their Accuracy lowered by 1 stage.",
+	},
+	grimtears: {
+		// Mazah
+		name: "Grim Tears",
+		desc: "On switch-in, this Pokemon lowers the Sp. Attack of opposing Pokemon by 1 stage.",
+		shortDesc: "On switch-in, this Pokemon lowers the Sp. Attack of opponents by 1 stage.",
+	},
+	momentum: {
+		// Mazah
+		name: "Momentum",
+		desc: "Damage of moves used on consecutive turns is increased. Max 2x after 5 turns.",
+		shortDesc: "Damage of moves used on consecutive turns is increased. Max 2x after 5 turns.",
+	},
+
 };

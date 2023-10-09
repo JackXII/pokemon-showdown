@@ -1,11 +1,11 @@
 // Note: These are the rules that formats use
 
-import {Utils} from "../lib";
-import {Pokemon} from "../sim/pokemon";
-import {Teams} from "../sim/teams";
+import { Utils } from "../lib";
+import { Pokemon } from "../sim/pokemon";
+import { Teams } from "../sim/teams";
 
 // The list of formats is stored in config/formats.js
-export const Rulesets: {[k: string]: FormatData} = {
+export const Rulesets: { [k: string]: FormatData; } = {
 
 	// Rulesets
 	///////////////////////////////////////////////////////////////////
@@ -241,7 +241,7 @@ export const Rulesets: {[k: string]: FormatData} = {
 			// repealing this will not actually let you USE multiple moves, because of a cart bug:
 			// https://twitter.com/DaWoblefet/status/1396217830006132737
 			if (set.moves) {
-				const hasMove: {[k: string]: true} = {};
+				const hasMove: { [k: string]: true; } = {};
 				for (const moveId of set.moves) {
 					const move = this.dex.moves.get(moveId);
 					const moveid = move.id;
@@ -633,7 +633,7 @@ export const Rulesets: {[k: string]: FormatData} = {
 		onBegin() {
 			this.add('rule', 'Blitz: Super-fast timer');
 		},
-		timer: {starting: 15, addPerTurn: 5, maxPerTurn: 15, maxFirstTurn: 40, grace: 30},
+		timer: { starting: 15, addPerTurn: 5, maxPerTurn: 15, maxFirstTurn: 40, grace: 30 },
 	},
 	vgctimer: {
 		effectType: 'Rule',
@@ -712,7 +712,7 @@ export const Rulesets: {[k: string]: FormatData} = {
 			this.add('rule', 'Double Item Clause: Limit two of each item');
 		},
 		onValidateTeam(team) {
-			const itemTable: {[k: string]: number} = {};
+			const itemTable: { [k: string]: number; } = {};
 			for (const set of team) {
 				const item = this.toID(set.item);
 				if (!item) continue;
@@ -746,7 +746,7 @@ export const Rulesets: {[k: string]: FormatData} = {
 		onValidateTeam(team) {
 			if (this.format.id === 'gen8multibility') return;
 			const abilityTable = new Map<string, number>();
-			const base: {[k: string]: string} = {
+			const base: { [k: string]: string; } = {
 				airlock: 'cloudnine',
 				armortail: 'queenlymajesty',
 				battlearmor: 'shellarmor',
@@ -953,7 +953,7 @@ export const Rulesets: {[k: string]: FormatData} = {
 				];
 				if (nonSpeedBoostedMoves.includes(move.id) ||
 					move.boosts && ((move.boosts.atk && move.boosts.atk > 0) || (move.boosts.def && move.boosts.def > 0) ||
-					(move.boosts.spa && move.boosts.spa > 0) || (move.boosts.spd && move.boosts.spd > 0))) {
+						(move.boosts.spa && move.boosts.spa > 0) || (move.boosts.spd && move.boosts.spd > 0))) {
 					nonSpeedBoosted = true;
 				}
 				if (item.zMove && move.type === item.zMoveType && move.zMove?.boost) {
@@ -963,7 +963,7 @@ export const Rulesets: {[k: string]: FormatData} = {
 					}
 					if (
 						((boosts.atk && boosts.atk > 0) || (boosts.def && boosts.def > 0) ||
-						(boosts.spa && boosts.spa > 0) || (boosts.spd && boosts.spd > 0))
+							(boosts.spa && boosts.spa > 0) || (boosts.spd && boosts.spd > 0))
 					) {
 						if (!nonSpeedBoosted || move.name === speedBoosted) nonSpeedBoosted = move.name;
 					}
@@ -1270,7 +1270,7 @@ export const Rulesets: {[k: string]: FormatData} = {
 			}
 			for (const set of team) {
 				if (this.gen === 9 && set.teraType &&
-						!typeTable.includes(set.teraType) && this.ruleTable.has(`enforcesameteratype`)) {
+					!typeTable.includes(set.teraType) && this.ruleTable.has(`enforcesameteratype`)) {
 					return [`${set.species}'s Tera Type must match the team's type.`];
 				}
 			}
@@ -1512,7 +1512,7 @@ export const Rulesets: {[k: string]: FormatData} = {
 			if (!target) return; // Chat command
 			if (effect && ['imposter', 'transform'].includes(effect.id)) return;
 			const types = [...new Set(target.baseMoveSlots.slice(0, 2).map(move => this.dex.moves.get(move.id).type))];
-			return {...species, types: types};
+			return { ...species, types: types };
 		},
 		onSwitchIn(pokemon) {
 			this.add('-start', pokemon, 'typechange', (pokemon.illusion || pokemon).getTypes(true).join('/'), '[silent]');
@@ -1714,7 +1714,7 @@ export const Rulesets: {[k: string]: FormatData} = {
 		onTeamPreview() {
 			let buf = 'raw|';
 			for (const side of this.sides) {
-				buf += Utils.html`<div class="infobox" style="margin-top:5px"><details><summary>Open Team Sheet for ${side.name}</summary>${Teams.export(side.team, {hideStats: true})}</details></div>`;
+				buf += Utils.html`<div class="infobox" style="margin-top:5px"><details><summary>Open Team Sheet for ${side.name}</summary>${Teams.export(side.team, { hideStats: true })}</details></div>`;
 			}
 			if (this.rated === true) {
 				for (const side of this.sides) {
@@ -1751,7 +1751,7 @@ export const Rulesets: {[k: string]: FormatData} = {
 		},
 		onValidateSet(set) {
 			const species = this.dex.species.get(set.species);
-			const learnsetData = {...(this.dex.data.Learnsets[species.id]?.learnset || {})};
+			const learnsetData = { ...(this.dex.data.Learnsets[species.id]?.learnset || {}) };
 			let prevo = species.prevo;
 			while (prevo) {
 				const prevoSpecies = this.dex.species.get(prevo);
@@ -1972,7 +1972,7 @@ export const Rulesets: {[k: string]: FormatData} = {
 			}
 			target.m.numSwaps++;
 			if (effect && effect.effectType === 'Move' && source.side.pokemon.length < 24 &&
-                source.side !== target.side && target.m.numSwaps < 4) {
+				source.side !== target.side && target.m.numSwaps < 4) {
 				const hpCost = this.clampIntRange(Math.floor((target.baseMaxhp * target.m.numSwaps) / 4), 1);
 				// Just in case(tm) and for Shedinja
 				if (hpCost === target.baseMaxhp) {
@@ -2071,7 +2071,7 @@ export const Rulesets: {[k: string]: FormatData} = {
 			const typesSet = new Set(species.types);
 			const bonusType = this.dex.types.get(target.teraType);
 			if (bonusType.exists) typesSet.add(bonusType.name);
-			return {...species, types: [...typesSet]};
+			return { ...species, types: [...typesSet] };
 		},
 		onSwitchIn(pokemon) {
 			this.add('-start', pokemon, 'typechange', (pokemon.illusion || pokemon).getTypes(true).join('/'), '[silent]');
@@ -2101,7 +2101,7 @@ export const Rulesets: {[k: string]: FormatData} = {
 		},
 		onModifySpecies(species, target, source, effect) {
 			if (!species.baseStats) return;
-			const boosts: {[tier: string]: number} = {
+			const boosts: { [tier: string]: number; } = {
 				uu: 15,
 				rubl: 15,
 				ru: 20,
@@ -2259,9 +2259,9 @@ export const Rulesets: {[k: string]: FormatData} = {
 					} else {
 						if (!m.secondaries) m.secondaries = [];
 						if (item.fling.status) {
-							m.secondaries.push({status: item.fling.status});
+							m.secondaries.push({ status: item.fling.status });
 						} else if (item.fling.volatileStatus) {
-							m.secondaries.push({volatileStatus: item.fling.volatileStatus});
+							m.secondaries.push({ volatileStatus: item.fling.volatileStatus });
 						}
 					}
 					source.addVolatile('fling');
@@ -2329,76 +2329,76 @@ export const Rulesets: {[k: string]: FormatData} = {
 			}
 
 			switch (move.id) {
-			case 'doomdesire': {
-				move.onTry = function (source, subtarget) {
-					if (!subtarget.side.addSlotCondition(subtarget, 'futuremove')) return false;
-					Object.assign(subtarget.side.slotConditions[subtarget.position]['futuremove'], {
-						move: 'doomdesire',
-						source: source,
-						moveData: {
-							id: 'doomdesire',
-							name: "Doom Desire",
-							accuracy: 100,
-							basePower: 140,
-							category: "Physical",
-							priority: 0,
-							flags: {futuremove: 1},
-							effectType: 'Move',
-							type: 'Steel',
-						},
-					});
-					this.add('-start', source, 'Doom Desire');
-					return this.NOT_FAIL;
-				};
-				break;
-			}
-			case 'futuresight': {
-				move.onTry = function (source, subtarget) {
-					if (!subtarget.side.addSlotCondition(subtarget, 'futuremove')) return false;
-					Object.assign(subtarget.side.slotConditions[subtarget.position]['futuremove'], {
-						duration: 3,
-						move: 'futuresight',
-						source: source,
-						moveData: {
-							id: 'futuresight',
-							name: "Future Sight",
-							accuracy: 100,
-							basePower: 120,
-							category: "Physical",
-							priority: 0,
-							flags: {futuremove: 1},
-							ignoreImmunity: false,
-							effectType: 'Move',
-							type: 'Psychic',
-						},
-					});
-					this.add('-start', source, 'move: Future Sight');
-					return this.NOT_FAIL;
-				};
-				break;
-			}
-			// Moves with dynamic categories will always be physical if not special-cased
-			case 'lightthatburnsthesky':
-			case 'photongeyser': {
-				move.category = 'Special';
-				if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) move.category = 'Physical';
-				break;
-			}
-			case 'shellsidearm': {
-				if (!target) return;
-				move.category = 'Special';
-				const atk = pokemon.getStat('atk', false, true);
-				const spa = pokemon.getStat('spa', false, true);
-				const def = target.getStat('def', false, true);
-				const spd = target.getStat('spd', false, true);
-				const physical = Math.floor(Math.floor(Math.floor(Math.floor(2 * pokemon.level / 5 + 2) * 90 * atk) / def) / 50);
-				const special = Math.floor(Math.floor(Math.floor(Math.floor(2 * pokemon.level / 5 + 2) * 90 * spa) / spd) / 50);
-				if (physical > special || (physical === special && this.random(2) === 0)) {
-					move.category = 'Physical';
-					move.flags.contact = 1;
+				case 'doomdesire': {
+					move.onTry = function (source, subtarget) {
+						if (!subtarget.side.addSlotCondition(subtarget, 'futuremove')) return false;
+						Object.assign(subtarget.side.slotConditions[subtarget.position]['futuremove'], {
+							move: 'doomdesire',
+							source: source,
+							moveData: {
+								id: 'doomdesire',
+								name: "Doom Desire",
+								accuracy: 100,
+								basePower: 140,
+								category: "Physical",
+								priority: 0,
+								flags: { futuremove: 1 },
+								effectType: 'Move',
+								type: 'Steel',
+							},
+						});
+						this.add('-start', source, 'Doom Desire');
+						return this.NOT_FAIL;
+					};
+					break;
 				}
-				break;
-			}
+				case 'futuresight': {
+					move.onTry = function (source, subtarget) {
+						if (!subtarget.side.addSlotCondition(subtarget, 'futuremove')) return false;
+						Object.assign(subtarget.side.slotConditions[subtarget.position]['futuremove'], {
+							duration: 3,
+							move: 'futuresight',
+							source: source,
+							moveData: {
+								id: 'futuresight',
+								name: "Future Sight",
+								accuracy: 100,
+								basePower: 120,
+								category: "Physical",
+								priority: 0,
+								flags: { futuremove: 1 },
+								ignoreImmunity: false,
+								effectType: 'Move',
+								type: 'Psychic',
+							},
+						});
+						this.add('-start', source, 'move: Future Sight');
+						return this.NOT_FAIL;
+					};
+					break;
+				}
+				// Moves with dynamic categories will always be physical if not special-cased
+				case 'lightthatburnsthesky':
+				case 'photongeyser': {
+					move.category = 'Special';
+					if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) move.category = 'Physical';
+					break;
+				}
+				case 'shellsidearm': {
+					if (!target) return;
+					move.category = 'Special';
+					const atk = pokemon.getStat('atk', false, true);
+					const spa = pokemon.getStat('spa', false, true);
+					const def = target.getStat('def', false, true);
+					const spd = target.getStat('spd', false, true);
+					const physical = Math.floor(Math.floor(Math.floor(Math.floor(2 * pokemon.level / 5 + 2) * 90 * atk) / def) / 50);
+					const special = Math.floor(Math.floor(Math.floor(Math.floor(2 * pokemon.level / 5 + 2) * 90 * spa) / spd) / 50);
+					if (physical > special || (physical === special && this.random(2) === 0)) {
+						move.category = 'Physical';
+						move.flags.contact = 1;
+					}
+					break;
+				}
 			}
 		},
 	},
@@ -2532,8 +2532,8 @@ export const Rulesets: {[k: string]: FormatData} = {
 			}
 			const problemPokemon = this.dex.species.all().filter(s => (
 				(s.name === 'Xerneas' || s.battleOnly || s.forme === 'Eternamax') &&
-					!(s.isMega || s.isPrimal || ['Greninja-Ash', 'Necrozma-Ultra'].includes(s.name)) &&
-					!(this.ruleTable.has(`+pokemon:${s.id}`) || this.ruleTable.has(`+basepokemon:${this.toID(s.baseSpecies)}`))
+				!(s.isMega || s.isPrimal || ['Greninja-Ash', 'Necrozma-Ultra'].includes(s.name)) &&
+				!(this.ruleTable.has(`+pokemon:${s.id}`) || this.ruleTable.has(`+basepokemon:${this.toID(s.baseSpecies)}`))
 			));
 			if (problemPokemon.includes(species)) {
 				if (species.requiredItem && this.toID(set.item) !== this.toID(species.requiredItem)) {
@@ -2674,7 +2674,8 @@ export const Rulesets: {[k: string]: FormatData} = {
 		banlist: [],
 		onValidateSet(set, format) {
 			const mazahDex = [
-				"Mollucotta","Gastronaut","Expersum",
+				"Mollucotta", "Gastronaut", "Expersum",
+				"Quetzalil", "Quexcell", "Quetzillian",
 			];
 			const species = this.dex.species.get(set.species || set.name);
 			if (!mazahDex.includes(species.baseSpecies) && !mazahDex.includes(species.name) &&
