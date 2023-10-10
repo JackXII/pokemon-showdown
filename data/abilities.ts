@@ -5369,11 +5369,52 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				return 1;
 			}
 		},
+		rating: 3,
 		num: 2000,
 	},
 	fierydancer: {
 		name: "Fiery Dancer",
 		// implemented in runMove in scripts.js
+		rating: 2,
+		num: 2001,
+	},
+	airbubble: {
+		onSourceModifyAtkPriority: 5,
+		onSourceModifyAtk(atk, attacker, defender, move) {
+			if (move.type === 'Ground') {
+				return this.chainModify(0.5);
+			}
+		},
+		onSourceModifySpAPriority: 5,
+		onSourceModifySpA(atk, attacker, defender, move) {
+			if (move.type === 'Ground') {
+				return this.chainModify(0.5);
+			}
+		},
+		onModifyAtk(atk, attacker, defender, move) {
+			if (move.type === 'Flying') {
+				return this.chainModify(2);
+			}
+		},
+		onModifySpA(atk, attacker, defender, move) {
+			if (move.type === 'Flying') {
+				return this.chainModify(2);
+			}
+		},
+		onImmunity(type, pokemon) {
+			if (type === 'sandstorm' || type === 'hail' || type === 'powder') return false;
+		},
+		onTryHitPriority: 1,
+		onTryHit(target, source, move) {
+			if (move.flags['powder'] && target !== source && this.dex.getImmunity('powder', target)) {
+				this.add('-immune', target, '[from] ability: Air Bubble');
+				return null;
+			}
+		},
+		isBreakable: true,
+		name: "Air Bubble",
+		rating: 5,
+		num: 2002,
 	},
 	shimmer: {
 		// Mazah
