@@ -1,4 +1,4 @@
-export const FormatsData: {[k: string]: SpeciesFormatsData} = {
+export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 	bulbasaur: {
 		isNonstandard: "Past",
 		tier: "Illegal",
@@ -6168,6 +6168,18 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "CAP",
 	},
 	quetzillian: {
+		isNonstandard: "Custom",
+		tier: "CAP",
+	},
+	porsite: {
+		isNonstandard: "Custom",
+		tier: "CAP",
+	},
+	cetoekko: {
+		isNonstandard: "Custom",
+		tier: "CAP",
+	},
+	bathygigas: {
 		isNonstandard: "Custom",
 		tier: "CAP",
 	},
