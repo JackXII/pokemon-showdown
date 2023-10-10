@@ -321,10 +321,14 @@ export class BattleActions {
 		// Dancer's activation order is completely different from any other event, so it's handled separately
 		if (move.flags['dance'] && moveDidSomething && !move.isExternal) {
 			const dancers = [];
+			const fieryDancers = [];
 			for (const currentPoke of this.battle.getAllActive()) {
 				if (pokemon === currentPoke) continue;
 				if (currentPoke.hasAbility('dancer') && !currentPoke.isSemiInvulnerable()) {
 					dancers.push(currentPoke);
+				}
+				if(currentPoke.hasAbility('fierydancer') && !currentPoke.isSemiInvulnerable()) {
+					fieryDancers.push(currentPoke);
 				}
 			}
 			// Dancer activates in order of lowest speed stat to highest
@@ -344,6 +348,10 @@ export class BattleActions {
 					pokemon;
 				const dancersTargetLoc = dancer.getLocOf(dancersTarget);
 				this.runMove(move.id, dancer, dancersTargetLoc, this.dex.abilities.get('dancer'), undefined, true);
+			}
+			for (const fieryDancer of fieryDancers){
+				this.battle.add('-activate', fieryDancer, 'ability: Fiery Dancer');
+				fieryDancer.boostBy({spa: 1});
 			}
 		}
 		if (noLock && pokemon.volatiles['lockedmove']) delete pokemon.volatiles['lockedmove'];

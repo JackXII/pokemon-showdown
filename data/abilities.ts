@@ -5373,16 +5373,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
 	fierydancer: {
 		name: "Fiery Dancer",
-		onAfterMove(source, target, move) {
-			if(move.flags['dance'])	{
-				this.boost({spa: 1}, target, source, null, false, true);
-			}
-		},
-		onAfterMoveSelf(source, target, move) {
-			if(move.flags['dance'])	{
-				this.boost({spa: 1}, target, source, null, false, true);
-			}
-		},
+		// implemented in runMove in scripts.js
 	},
 	shimmer: {
 		// Mazah
