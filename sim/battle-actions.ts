@@ -352,7 +352,7 @@ export class BattleActions {
 			}
 			for (const fieryDancer of fieryDancers){
 				this.battle.add('-activate', fieryDancer, 'ability: Fiery Dancer');
-				fieryDancer.boostBy({spa: 1});
+				this.battle.boost({spa: 1}, fieryDancer);
 			}
 		}
 		if (noLock && pokemon.volatiles['lockedmove']) delete pokemon.volatiles['lockedmove'];
