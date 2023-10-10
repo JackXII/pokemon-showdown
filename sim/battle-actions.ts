@@ -323,13 +323,14 @@ export class BattleActions {
 			const dancers = [];
 			const fieryDancers = [];
 			for (const currentPoke of this.battle.getAllActive()) {
+				if(currentPoke.hasAbility('fierydancer') && !currentPoke.isSemiInvulnerable() && pokemon.fullname === currentPoke.fullname) {
+					fieryDancers.push(currentPoke);
+				}
 				if (pokemon === currentPoke) continue;
 				if (currentPoke.hasAbility('dancer') && !currentPoke.isSemiInvulnerable()) {
 					dancers.push(currentPoke);
 				}
-				if(currentPoke.hasAbility('fierydancer') && !currentPoke.isSemiInvulnerable()) {
-					fieryDancers.push(currentPoke);
-				}
+			
 			}
 			// Dancer activates in order of lowest speed stat to highest
 			// Note that the speed stat used is after any volatile replacements like Speed Swap,
