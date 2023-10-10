@@ -3785,7 +3785,23 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	quetzillian: {
 		name: "Quetzillian",
 	},
+	porsite: {
+		name: "Porsite",
+	},
+	cettoekko: {
+		name: "Cettoekko",
+	},
+	bathygigas: {
+		name: "Bathygigas",
+	},
+	pacuna: {
+		name: "Pacuna",
+	},
+	laguna: {
+		name: "Laguna",
+	},
 	maurios: {
 		name: "Maurios",
 	},
+	
 };

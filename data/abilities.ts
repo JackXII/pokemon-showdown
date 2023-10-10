@@ -5420,8 +5420,10 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		// Mazah
 		onDamagingHit(damage, target, source, move) {
 			if (this.checkMoveMakesContact(move, source, target, true)) {
-				this.add('-ability', target, 'Shimmer');
-				this.boost({accuracy: -1}, source, target, null, true);
+				if (this.randomChance(3, 10)) {
+					this.add('-ability', target, 'Shimmer');
+					this.boost({accuracy: -1}, source, target, null, true);
+				}
 			}
 		},
 		name: "Shimmer",
