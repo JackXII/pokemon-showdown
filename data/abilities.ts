@@ -5442,9 +5442,9 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				return this.chainModify(2);
 			}
 		},
-		onDamagingHit(damage, target, source, move) {
+		onSourceDamagingHit(damage, target, source, move) {
 			if (this.randomChance(3, 10)) {
-				source.trySetStatus('psn', target);
+				target.trySetStatus('psn', target);
 			}
 		},
 		name: "Black Stinger",
