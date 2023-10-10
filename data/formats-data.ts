@@ -6191,4 +6191,16 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Custom",
 		tier: "CAP",
 	},
+	wrenner: {
+		isNonstandard: "Custom",
+		tier: "CAP",
+	},
+	aveor: {
+		isNonstandard: "Custom",
+		tier: "CAP",
+	},
+	roadraptor: {
+		isNonstandard: "Custom",
+		tier: "CAP",
+	},
 };

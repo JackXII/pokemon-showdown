@@ -2678,6 +2678,7 @@ export const Rulesets: { [k: string]: FormatData; } = {
 				"Quetzalil", "Quexcell", "Quetzillian",
 				"Porsite", "Cetoekko", "Bathygigas",
 				"Pacuna", "Laguna",
+				"Wrenner", "Aveor", "Roadraptor",
 			];
 			const species = this.dex.species.get(set.species || set.name);
 			if (!mazahDex.includes(species.baseSpecies) && !mazahDex.includes(species.name) &&
