@@ -6203,4 +6203,20 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Custom",
 		tier: "CAP",
 	},
+	minimelo: {
+		isNonstandard: "Custom",
+		tier: "CAP",
+	},
+	chicatta: {
+		isNonstandard: "Custom",
+		tier: "CAP",
+	},
+	noctavispa: {
+		isNonstandard: "Custom",
+		tier: "CAP",
+	},
+	noctavispamega: {
+		isNonstandard: "Custom",
+		tier: "CAP",
+	},
 };

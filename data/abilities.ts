@@ -5430,6 +5430,27 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 2,
 		num: 2003,
 	},
+	blackstinger: {
+		// Mazah
+		onModifyAtk(atk, attacker, defender, move) {
+			if (move.type === 'Bug' || move.type === 'Dark') {
+				return this.chainModify(2);
+			}
+		},
+		onModifySpA(atk, attacker, defender, move) {
+			if (move.type === 'Bug' || move.type === 'Dark') {
+				return this.chainModify(2);
+			}
+		},
+		onDamagingHit(damage, target, source, move) {
+			if (this.randomChance(3, 10)) {
+				source.trySetStatus('psn', target);
+			}
+		},
+		name: "Black Stinger",
+		rating: 3,
+		num: 2004,
+	},
 	grimtears: {
 		// Mazah
 		onStart(pokemon) {
@@ -5444,7 +5465,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		},
 		name: "Grim Tears",
 		rating: 3.5,
-		num: 2004,
+		num: 2005,
 	},
 	momentum: {
 		// Mazah
@@ -5483,6 +5504,6 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				return this.chainModify([dmgMod[numConsecutive], 4096]);
 			},
 		},
-		num: 2005,
+		num: 2006,
 	},
 };

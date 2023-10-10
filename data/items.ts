@@ -7631,4 +7631,17 @@ export const Items: {[itemid: string]: ItemData} = {
 		gen: 8,
 		isNonstandard: "CAP",
 	},
+	noctavispite: {
+		name: "Noctavispite",
+		spritenum: 608,
+		megaStone: "Noctavispa-Mega",
+		megaEvolves: "Noctavispa",
+		itemUser: ["Noctavispa"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -2000,
+		gen: 21,
+	},
 };

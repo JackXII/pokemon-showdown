@@ -3809,6 +3809,15 @@ export const PokedexText: { [k: string]: PokedexText; } = {
 	roadraptor: {
 		name: "Roadraptor",
 	},
+	minimelo: {
+		name: "Minimelo",
+	},
+	chicatta: {
+		name: "Chicatta",
+	},
+	noctavispa: {
+		name: "Noctavispa",
+	},
 	maurios: {
 		name: "Maurios",
 	},
