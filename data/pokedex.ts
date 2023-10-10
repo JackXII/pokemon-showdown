@@ -19823,6 +19823,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		eggGroups: ["Bug"],
 		otherFormes: ["Noctavispa-Mega"],
 		formeOrder: ["Noctavispa", "Noctavispa-Mega"],
+		gen: 21,
 	},
 	noctavispamega: {
 		num: -2017,
@@ -19838,6 +19839,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Black",
 		eggGroups: ["Bug"],
 		requiredItem: "Noctavispite",
+		gen: 21,
 	},
 	maurios: {
 		num: -8001,
