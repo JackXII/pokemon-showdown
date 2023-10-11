@@ -5502,4 +5502,30 @@ export const Abilities: { [abilityid: string]: AbilityData; } = {
 		},
 		num: 2006,
 	},
+	microstrike: {
+		// Mazah
+		name: "Micro Strike",
+		onModifyDamage(damage, source, target, move) {
+			const dmgMod = [4096, 4915, 5734, 6553, 7372, 8192];
+			let rangeWeight = 0;
+			if(target.weighthg <= 8333){
+				rangeWeight = 1;
+			}
+			if(target.weighthg <= 6667){
+				rangeWeight = 2;
+			}
+			if(target.weighthg <= 5001){
+				rangeWeight = 3;
+			}
+			if(target.weighthg <= 3335){
+				rangeWeight = 4;
+			}
+			if(target.weighthg <= 1669){
+				rangeWeight = 5;
+			}
+			this.debug(`Current Micro Strike boost: ${dmgMod[rangeWeight]}/4096`);
+			return this.chainModify([dmgMod[rangeWeight], 4096]);
+		},
+		num: 2007,
+	},
 };

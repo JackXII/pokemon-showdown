@@ -3842,5 +3842,11 @@ export const PokedexText: { [k: string]: PokedexText; } = {
 	rotatona: {
 		name: "Rotatona",
 	},
+	chispeka: {
+		name: "Chispeka",
+	},
+	ariamano: {
+		name: "Ariamano",
+	},
 
 };

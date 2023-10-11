@@ -6247,4 +6247,12 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Custom",
 		tier: "CAP",
 	},
+	chispeka: {
+		isNonstandard: "Custom",
+		tier: "CAP",
+	},
+	ariamano: {
+		isNonstandard: "Custom",
+		tier: "CAP",
+	},
 };
