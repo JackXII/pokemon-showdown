@@ -3854,5 +3854,7 @@ export const PokedexText: { [k: string]: PokedexText; } = {
 	tartusk: {
 		name: "Tartusk",
 	},
-
+	chixulob: {
+		name: "Chixulob",
+	},
 };

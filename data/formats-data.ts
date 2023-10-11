@@ -6263,4 +6263,8 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Custom",
 		tier: "CAP",
 	},
+	chixulob: {
+		isNonstandard: "Custom",
+		tier: "CAP",
+	},
 };

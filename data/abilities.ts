@@ -5508,24 +5508,49 @@ export const Abilities: { [abilityid: string]: AbilityData; } = {
 		onModifyDamage(damage, source, target, move) {
 			const dmgMod = [4096, 4915, 5734, 6553, 7372, 8192];
 			let rangeWeight = 0;
-			if(target.weighthg <= 8333){
+			if (target.weighthg <= 8333) {
 				rangeWeight = 1;
 			}
-			if(target.weighthg <= 6667){
+			if (target.weighthg <= 6667) {
 				rangeWeight = 2;
 			}
-			if(target.weighthg <= 5001){
+			if (target.weighthg <= 5001) {
 				rangeWeight = 3;
 			}
-			if(target.weighthg <= 3335){
+			if (target.weighthg <= 3335) {
 				rangeWeight = 4;
 			}
-			if(target.weighthg <= 1669){
+			if (target.weighthg <= 1669) {
 				rangeWeight = 5;
 			}
 			this.debug(`Current Micro Strike boost: ${dmgMod[rangeWeight]}/4096`);
 			return this.chainModify([dmgMod[rangeWeight], 4096]);
 		},
 		num: 2007,
+	},
+	firstimpact: {
+		// Mazah
+		onStart(pokemon) {
+			let activated = false;
+			if (!pokemon.abilityState.firstImpact) {
+				for (const target of pokemon.adjacentFoes()) {
+					if (!activated) {
+						this.add('-ability', pokemon, 'First Impact', 'damage');
+						this.damage(target.baseMaxhp / 4, target, pokemon);
+					}
+				}
+				for (const target of pokemon.adjacentAllies()) {
+					if (!activated) {
+						this.add('-ability', pokemon, 'First Impact', 'damage');
+						this.damage(target.baseMaxhp / 4, target, pokemon);
+					}
+				}
+				activated = true;
+				pokemon.abilityState.firstImpact = true;
+			}
+		},
+		name: "First Impact",
+		rating: 3.5,
+		num: 2005,
 	},
 };
