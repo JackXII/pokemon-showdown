@@ -3821,5 +3821,14 @@ export const PokedexText: { [k: string]: PokedexText; } = {
 	maurios: {
 		name: "Maurios",
 	},
+	techuppi: {
+		name: "Techuppi",
+	},
+	lupacabra: {
+		name: "Lupacabra",
+	},
+	zolupine: {
+		name: "Zolupine",
+	},
 
 };

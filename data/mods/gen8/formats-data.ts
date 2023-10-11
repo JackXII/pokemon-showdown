@@ -5604,8 +5604,4 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		isNonstandard: "Custom",
 		tier: "Illegal",
 	},
-	maurios: {
-		isNonstandard: "CAP",
-		tier: "CAP",
-	},
 };

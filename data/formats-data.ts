@@ -6219,4 +6219,17 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Custom",
 		tier: "CAP",
 	},
+	techuppi: {
+		isNonstandard: "Custom",
+		tier: "CAP",
+	},
+	lupacabra: {
+		isNonstandard: "Custom",
+		tier: "CAP",
+	},
+	zolupine: {
+		isNonstandard: "Custom",
+		tier: "CAP",
+	},
+
 };
