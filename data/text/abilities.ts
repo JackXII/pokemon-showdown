@@ -2260,5 +2260,17 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		desc: "Damage of moves used on consecutive turns is increased. Max 2x after 5 turns.",
 		shortDesc: "Damage of moves used on consecutive turns is increased. Max 2x after 5 turns.",
 	},
+	microstrike: {
+		// Mazah
+		name: "Momentum",
+		desc: "Damage of moves used on lightier pokemon is increased. Range from 1.2x to 2x.",
+		shortDesc: "Damage of moves used on lightier pokemon is increased. Range from 1.2x to 2x.",
+	},
+	firstimpact: {
+		// Mazah
+		name: "Momentum",
+		desc: "Upon entering the battlefield the first time deals 1/4 Max Hp damage to all others pokemons.",
+		shortDesc: "First switch in deals 25% damage to every other pokemon.",
+	},
 
 };
