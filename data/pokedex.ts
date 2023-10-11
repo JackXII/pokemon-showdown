@@ -19916,7 +19916,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	},
 	yoronaqua: {
 		name: "Yoronaqua",
-		num: -21022,
+		num: -21023,
 		types: ["Ghost", "Water"],
 		gender: "F",
 		baseStats: {hp: 95, atk: 55, def: 85, spa: 90, spd: 145, spe: 70},
@@ -19926,6 +19926,19 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Blue",
 		prevo: "Yaqueena",
 		eggGroups: ["Amorphous", "Human-Like"],
+		gen: 21,
+	},
+	rotatona: {
+		name: "Rotatona",
+		num: -21024,
+		types: ["Ground", "Fairy"],
+		gender: "N",
+		baseStats: {hp: 75, atk: 85, def: 120, spa: 45, spd: 60, spe: 95},
+		abilities: {0: "Momentum"},
+		heightm: 4.16,
+		weightkg: 912.47,
+		color: "Brown",
+		eggGroups: ["Mineral", "Amorphous"],
 		gen: 21,
 	},
 	maurios: {

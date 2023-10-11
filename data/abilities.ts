@@ -5459,7 +5459,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				if (!activated) {
 					this.add('-ability', pokemon, 'Grim Tears', 'boost');
 					activated = true;
-					this.boost({atk: -1}, target, pokemon, null, true);
+					this.boost({spa: -1}, target, pokemon, null, true);
 				}
 			}
 		},

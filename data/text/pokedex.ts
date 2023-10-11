@@ -3839,5 +3839,8 @@ export const PokedexText: { [k: string]: PokedexText; } = {
 	yoronaqua: {
 		name: "Yoronaqua",
 	},
+	rotatona: {
+		name: "Rotatona",
+	},
 
 };

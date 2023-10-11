@@ -6243,4 +6243,8 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Custom",
 		tier: "CAP",
 	},
+	rotatona: {
+		isNonstandard: "Custom",
+		tier: "CAP",
+	},
 };
