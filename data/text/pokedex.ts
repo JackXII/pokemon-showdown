@@ -3848,5 +3848,11 @@ export const PokedexText: { [k: string]: PokedexText; } = {
 	ariamano: {
 		name: "Ariamano",
 	},
+	elegoop: {
+		name: "Elegoop",
+	},
+	tartusk: {
+		name: "Tartusk",
+	},
 
 };

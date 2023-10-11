@@ -6255,4 +6255,12 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Custom",
 		tier: "CAP",
 	},
+	elegoop: {
+		isNonstandard: "Custom",
+		tier: "CAP",
+	},
+	tartusk: {
+		isNonstandard: "Custom",
+		tier: "CAP",
+	},
 };
