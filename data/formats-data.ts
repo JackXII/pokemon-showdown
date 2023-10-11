@@ -6231,5 +6231,16 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Custom",
 		tier: "CAP",
 	},
-
+	lilorina: {
+		isNonstandard: "Custom",
+		tier: "CAP",
+	},
+	yaqueena: {
+		isNonstandard: "Custom",
+		tier: "CAP",
+	},
+	yoronaqua: {
+		isNonstandard: "Custom",
+		tier: "CAP",
+	},
 };

@@ -19581,7 +19581,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		gen: 5,
 	},
 	mollucotta: {
-		num: -2001,
+		num: -21001,
 		name: "Mollucotta",
 		types: ["Grass"],
 		genderRatio: {M: 0.875, F: 0.125},
@@ -19595,7 +19595,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		gen: 21,
 	},
 	expersum: {
-		num: -2002,
+		num: -21002,
 		name: "Expersum",
 		types: ["Grass"],
 		genderRatio: {M: 0.875, F: 0.125},
@@ -19610,7 +19610,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		gen: 21,
 	},
 	gastronaut: {
-		num: -2003,
+		num: -21003,
 		name: "Gastronaut",
 		types: ["Grass", "Ground"],
 		genderRatio: {M: 0.875, F: 0.125},
@@ -19624,7 +19624,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		gen: 21,
 	},
 	quetzalil: {
-		num: -2004,
+		num: -21004,
 		name: "Quetzalil",
 		types: ["Fire"],
 		genderRatio: {M: 0.875, F: 0.125},
@@ -19638,7 +19638,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		gen: 21,
 	},
 	quexcell: {
-		num: -2005,
+		num: -21005,
 		name: "Quexcell",
 		types: ["Fire"],
 		genderRatio: {M: 0.875, F: 0.125},
@@ -19653,7 +19653,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		gen: 21,
 	},
 	quetzillian: {
-		num: -2006,
+		num: -21006,
 		name: "Quetzillian",
 		types: ["Fire", "Dragon"],
 		genderRatio: {M: 0.875, F: 0.125},
@@ -19667,7 +19667,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		gen: 21,
 	},
 	porsite: {
-		num: -2007,
+		num: -21007,
 		name: "Porsite",
 		types: ["Water", "Psychic"],
 		genderRatio: {M: 0.875, F: 0.125},
@@ -19681,7 +19681,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		gen: 21,
 	},
 	cetoekko: {
-		num: -2008,
+		num: -21008,
 		name: "Cetoekko",
 		types: ["Water", "Psychic"],
 		genderRatio: {M: 0.875, F: 0.125},
@@ -19696,7 +19696,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		gen: 21,
 	},
 	bathygigas: {
-		num: -2009,
+		num: -21009,
 		name: "Bathygigas",
 		types: ["Water", "Psychic"],
 		genderRatio: {M: 0.875, F: 0.125},
@@ -19710,7 +19710,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		gen: 21,
 	},
 	pacuna: {
-		num: -2010,
+		num: -21010,
 		name: "Pacuna",
 		types: ["Normal"],
 		genderRatio: {M: 0.5, F: 0.5},
@@ -19724,7 +19724,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		gen: 21,
 	},
 	laguna: {
-		num: -2011,
+		num: -21011,
 		name: "Laguna",
 		types: ["Normal", "Fairy"],
 		genderRatio: {M: 0.5, F: 0.5},
@@ -19738,7 +19738,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		gen: 21,
 	},
 	wrenner: {
-		num: -2012,
+		num: -21012,
 		name: "Wrenner",
 		types: ["Ground", "Flying"],
 		genderRatio: {M: 0.5, F: 0.5},
@@ -19752,7 +19752,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		gen: 21,
 	},
 	aveor: {
-		num: -2013,
+		num: -21013,
 		name: "Aveor",
 		types: ["Electric", "Flying"],
 		genderRatio: {M: 0.5, F: 0.5},
@@ -19767,7 +19767,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		gen: 21,
 	},
 	roadraptor: {
-		num: -2014,
+		num: -21014,
 		name: "Roadraptor",
 		types: ["Electric", "Flying"],
 		genderRatio: {M: 0.5, F: 0.5},
@@ -19781,7 +19781,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		gen: 21,
 	},
 	minimelo: {
-		num: -2015,
+		num: -21015,
 		name: "Minimelo",
 		types: ["Bug"],
 		genderRatio: {M: 0.5, F: 0.5},
@@ -19795,7 +19795,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		gen: 21,
 	},
 	chicatta: {
-		num: -2016,
+		num: -21016,
 		name: "Chicatta",
 		types: ["Bug"],
 		genderRatio: {M: 0.5, F: 0.5},
@@ -19810,7 +19810,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		gen: 21,
 	},
 	noctavispa: {
-		num: -2017,
+		num: -21017,
 		name: "Noctavispa",
 		types: ["Bug", "Dark"],
 		genderRatio: {M: 0.875, F: 0.125},
@@ -19826,7 +19826,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		gen: 21,
 	},
 	noctavispamega: {
-		num: -2017,
+		num: -21017,
 		name: "Noctavispa-Mega",
 		baseSpecies: "Noctavispa",
 		forme: "Mega",
@@ -19842,7 +19842,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		gen: 21,
 	},
 	techuppi: {
-		num: -2018,
+		num: -21018,
 		name: "Techuppi",
 		types: ["Dark"],
 		genderRatio: {M: 0.5, F: 0.5},
@@ -19856,7 +19856,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		gen: 21,
 	},
 	lupacabra: {
-		num: -2019,
+		num: -21019,
 		name: "Lupacabra",
 		types: ["Dark"],
 		genderRatio: {M: 0.5, F: 0.5},
@@ -19870,7 +19870,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		gen: 21,
 	},
 	zolupine: {
-		num: -2020,
+		num: -21020,
 		name: "Zolupine",
 		types: ["Dark", "Water"],
 		genderRatio: {M: 0.5, F: 0.5},
@@ -19883,6 +19883,49 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evoType: "useItem",
 		evoItem: "Water Stone",
 		eggGroups: ["Field"],
+		gen: 21,
+	},
+	lilorina: {
+		name: "Liloriña",
+		num: -21021,
+		types: ["Ghost", "Water"],
+		gender: "F",
+		baseStats: {hp: 50, atk: 30, def: 20, spa: 45, spd: 65, spe: 45},
+		abilities: {0: "Grim Tears"},
+		heightm: 0.63,
+		weightkg: 0.91,
+		color: "Blue",
+		evos: ["Yaqueena"],
+		eggGroups: ["Amorphous", "Human-Like"],
+		gen: 21,
+	},
+	yaqueena: {
+		name: "Yaqueena",
+		num: -21022,
+		types: ["Ghost", "Water"],
+		gender: "F",
+		baseStats: {hp: 65, atk: 45, def: 50, spa: 75, spd: 95, spe: 50},
+		abilities: {0: "Grim Tears"},
+		heightm: 0.99,
+		weightkg: 3.63,
+		color: "Blue",
+		prevo: "Lilorina",
+		evos: ["Yoronaqua"],
+		eggGroups: ["Amorphous", "Human-Like"],
+		gen: 21,
+	},
+	yoronaqua: {
+		name: "Yoronaqua",
+		num: -21022,
+		types: ["Ghost", "Water"],
+		gender: "F",
+		baseStats: {hp: 95, atk: 55, def: 85, spa: 90, spd: 145, spe: 70},
+		abilities: {0: "Grim Tears"},
+		heightm: 1.85,
+		weightkg: 9.98,
+		color: "Blue",
+		prevo: "Yaqueena",
+		eggGroups: ["Amorphous", "Human-Like"],
 		gen: 21,
 	},
 	maurios: {
