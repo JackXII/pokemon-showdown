@@ -5533,15 +5533,14 @@ export const Abilities: { [abilityid: string]: AbilityData; } = {
 		onStart(pokemon) {
 			let activated = false;
 			if (!pokemon.abilityState.firstImpact) {
+				this.add('-ability', pokemon, 'First Impact', 'damage');
 				for (const target of pokemon.adjacentFoes()) {
 					if (!activated) {
-						this.add('-ability', pokemon, 'First Impact', 'damage');
 						this.damage(target.baseMaxhp / 4, target, pokemon);
 					}
 				}
 				for (const target of pokemon.adjacentAllies()) {
 					if (!activated) {
-						this.add('-ability', pokemon, 'First Impact', 'damage');
 						this.damage(target.baseMaxhp / 4, target, pokemon);
 					}
 				}

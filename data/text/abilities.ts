@@ -2262,13 +2262,13 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	microstrike: {
 		// Mazah
-		name: "Momentum",
+		name: "Micro Strike",
 		desc: "Damage of moves used on lightier pokemon is increased. Range from 1.2x to 2x.",
 		shortDesc: "Damage of moves used on lightier pokemon is increased. Range from 1.2x to 2x.",
 	},
 	firstimpact: {
 		// Mazah
-		name: "Momentum",
+		name: "First Impact",
 		desc: "Upon entering the battlefield the first time deals 1/4 Max Hp damage to all others pokemons.",
 		shortDesc: "First switch in deals 25% damage to every other pokemon.",
 	},
