@@ -6267,4 +6267,13 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Custom",
 		tier: "CAP",
 	},
+	
+	charcopal: {
+		isNonstandard: "Custom",
+		tier: "CAP",
+	},
+	geocorpion: {
+		isNonstandard: "Custom",
+		tier: "CAP",
+	},
 };

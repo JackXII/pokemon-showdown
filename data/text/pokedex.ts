@@ -3857,4 +3857,10 @@ export const PokedexText: { [k: string]: PokedexText; } = {
 	chixulob: {
 		name: "Chixulob",
 	},
+	charcopal: {
+		name: "Charcopal",
+	},
+	geocorpion: {
+		name: "Geocorpion",
+	},
 };
