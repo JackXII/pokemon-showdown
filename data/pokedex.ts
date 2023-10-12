@@ -19886,7 +19886,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		gen: 21,
 	},
 	lilorina: {
-		name: "Liloriña",
+		name: "Lilorina",
 		num: -21021,
 		types: ["Ghost", "Water"],
 		gender: "F",
@@ -19909,7 +19909,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		heightm: 0.99,
 		weightkg: 3.63,
 		color: "Blue",
-		prevo: "Liloriña",
+		prevo: "Lilorina",
 		evos: ["Yoronaqua"],
 		eggGroups: ["Amorphous", "Human-Like"],
 		gen: 21,

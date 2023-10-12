@@ -2272,5 +2272,12 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		desc: "Upon entering the battlefield the first time deals 1/4 Max Hp damage to all others pokemons.",
 		shortDesc: "First switch in deals 25% damage to every other pokemon.",
 	},
+	crystaljaw: {
+		// Mazah
+		name: "Crystal Jaw",
+		desc: "Phisycal move power is halved, Special move hit the defense instead of special defense.",
+		shortDesc: "Phisycal move power is halved, Special move hit the defense instead of special defense.",
+	},
+	
 
 };

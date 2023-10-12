@@ -5501,6 +5501,7 @@ export const Abilities: { [abilityid: string]: AbilityData; } = {
 			return this.chainModify([dmgMod[numConsecutive], 4096]);
 		},
 		num: 2006,
+		rating: 3,
 	},
 	microstrike: {
 		// Mazah
@@ -5527,6 +5528,7 @@ export const Abilities: { [abilityid: string]: AbilityData; } = {
 			return this.chainModify([dmgMod[rangeWeight], 4096]);
 		},
 		num: 2007,
+		rating: 3,
 	},
 	firstimpact: {
 		// Mazah
@@ -5551,5 +5553,18 @@ export const Abilities: { [abilityid: string]: AbilityData; } = {
 		name: "First Impact",
 		rating: 3.5,
 		num: 2005,
+	},
+	crystaljaw: {
+		// Mazah
+		name: "Crystal Jaw",
+		onModifyAtk(atk, attacker, defender, move) {
+				return this.chainModify(0.5);
+		},
+		onModifySpA(atk, attacker, defender, move) {
+			move.overrideDefensiveStat = 'def';
+			return this.chainModify(1);
+		},
+		rating: 1,
+		num: 2006,
 	},
 };

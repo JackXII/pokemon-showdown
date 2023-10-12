@@ -3831,7 +3831,7 @@ export const PokedexText: { [k: string]: PokedexText; } = {
 		name: "Zolupine",
 	},
 	lilorina: {
-		name: "Liloriña",
+		name: "Lilorina",
 	},
 	yaqueena: {
 		name: "Yaqueena",

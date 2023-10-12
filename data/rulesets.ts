@@ -2681,7 +2681,7 @@ export const Rulesets: { [k: string]: FormatData; } = {
 				"Wrenner", "Aveor", "Roadraptor",
 				"Minimelo", "Chicatta", "Noctavispa",
 				"Techuppi","Lupacabra","Zolupine",
-				"Liloriña", "Yaqueena", "Yoronaqua",
+				"Lilorina", "Yaqueena", "Yoronaqua",
 				"Rotatona", "Chispeka", "Ariamano",
 				"Elegoop", "Tartusk",
 				"Chixulob",

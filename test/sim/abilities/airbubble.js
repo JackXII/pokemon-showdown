@@ -21,7 +21,7 @@ describe('Aftermath', function () {
 		assert.equal('', defender.status);
 	});
 
-	it("should deal double damage using Flying phisical/special move", function () {
+	it("should deal double damage using Flying physical/special move", function () {
 		battle = common.createBattle([[
 			{species: 'galvantula', moves: ['aerialace']},
 		], [
@@ -62,7 +62,7 @@ describe('Aftermath', function () {
 		assert.notEqual(lostHPWithOutAirBubbleSpecial, lostHPWithAirBubbleSpecial);
 	});
 
-	it("should receive half damage receiving Ground phisical/special move", function () {
+	it("should receive half damage receiving Ground physical/special move", function () {
 		battle = common.createBattle([[
 			{species: 'galvantula', moves: ['earthquake']},
 		], [

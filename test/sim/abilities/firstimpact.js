@@ -52,10 +52,10 @@ describe('First Impact', function () {
 			{species: 'cleffa', evs: {hp: 252}, ability: 'shellarmor', moves: ['sleeptalk']},
 		]]);
 		
-		battle.makeChoices('switch 1', 'move sleeptalk');
+		battle.makeChoices('switch 2', 'move sleeptalk');
 		let cleffa = battle.p2.active[0];
 		let damage1 = cleffa.maxhp - cleffa.hp;
-		battle.makeChoices('switch 1', 'move sleeptalk');
+		battle.makeChoices('switch 2', 'move sleeptalk');
 		let damage2 = cleffa.maxhp - cleffa.hp;
 		assert.equal(damage1, damage2);
 	});
