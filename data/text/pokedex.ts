@@ -3882,6 +3882,6 @@ export const PokedexText: { [k: string]: PokedexText; } = {
 		name: "Mudbray-Mazah",
 	}, 
 	mudsmache: {
-		name: "Mudsmache\u0301",
+		name: "Mudsmache",
 	},
 };
