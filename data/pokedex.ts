@@ -20097,6 +20097,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		weightkg: 27.66,
 		color: "Green",
 		eggGroups: ["Grass"],
+		gen: 21,
 	},
 	mudbraymazah: {
 		name: "Mudbray-Mazah",
