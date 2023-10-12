@@ -5560,9 +5560,10 @@ export const Abilities: { [abilityid: string]: AbilityData; } = {
 		onModifyAtk(atk, attacker, defender, move) {
 				return this.chainModify(0.5);
 		},
-		onModifySpA(atk, attacker, defender, move) {
-			move.overrideDefensiveStat = 'def';
-			return this.chainModify(1);
+		onTryMove(source, target, move) {
+			if(move.category === 'Special'){
+				move.overrideDefensiveStat = 'def';
+			}
 		},
 		rating: 1,
 		num: 2006,
