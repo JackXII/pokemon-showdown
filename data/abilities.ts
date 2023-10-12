@@ -5593,4 +5593,16 @@ export const Abilities: { [abilityid: string]: AbilityData; } = {
 		rating: 0,
 		num: 2007,
 	},
+	partypopper: {
+		name: "Party Popper",
+		onDamagingHitOrder: 1,
+		onDamagingHit(damage, target, source, move) {
+			if (!target.hp) {
+				target.side.partyPopped = true;
+				this.damage(target.getUndynamaxedHP(damage), source, target);
+			}
+		},
+		rating: 3,
+		num: 2008,
+	},
 };

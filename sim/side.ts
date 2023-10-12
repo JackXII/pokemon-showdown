@@ -74,6 +74,7 @@ export class Side {
 
 	pokemonLeft: number;
 	zMoveUsed: boolean;
+	partyPopped?: boolean;
 	/**
 	 * This will be true in any gen before 8 or if the player (or their battle partner) has dynamaxed once already
 	 *
@@ -202,6 +203,10 @@ export class Side {
 			case 'switch':
 			case 'instaswitch':
 			case 'revivalblessing':
+				if(this.partyPopped && action.target){
+					action.target.hp = action.target?.maxhp;
+					this.partyPopped = false;
+				}
 				return `switch ${action.target!.position + 1}`;
 			case 'team':
 				return `team ${action.pokemon!.position + 1}`;

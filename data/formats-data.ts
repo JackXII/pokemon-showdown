@@ -6296,4 +6296,12 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Custom",
 		tier: "CAP",
 	},
+	mudbraymazah: {
+		isNonstandard: "Custom",
+		tier: "CAP",
+	},
+	mudsmache: {
+		isNonstandard: "Custom",
+		tier: "CAP",
+	},
 };
