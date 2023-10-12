@@ -5568,4 +5568,29 @@ export const Abilities: { [abilityid: string]: AbilityData; } = {
 		rating: 1,
 		num: 2006,
 	},
+	rehydration: {
+		onAfterMoveSecondary(target, source, move) {
+			if (!target.hp) return;
+			const type = move.type;
+			const grass = 'Grass';
+			if (
+				target.isActive && move.effectType === 'Move' && type === 'Water' 
+				&& !target.hasType(grass)
+			) {
+				if (!target.setType(grass)) return false;
+				this.add('-start', target, 'typechange', grass, '[from] ability: Rehydration');
+
+				if (target.side.active.length === 2 && target.position === 1) {
+					// Curse Glitch
+					const action = this.queue.willMove(target);
+					if (action && action.move.id === 'curse') {
+						action.targetLoc = -1;
+					}
+				}
+			}
+		},
+		name: "Rehydration",
+		rating: 0,
+		num: 2007,
+	},
 };

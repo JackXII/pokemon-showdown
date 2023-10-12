@@ -6276,4 +6276,24 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Custom",
 		tier: "CAP",
 	},
+	zeazaya: {
+		isNonstandard: "Custom",
+		tier: "CAP",
+	},
+	mayzmen: {
+		isNonstandard: "Custom",
+		tier: "CAP",
+	},
+	zhusk: {
+		isNonstandard: "Custom",
+		tier: "CAP",
+	},
+	blazea: {
+		isNonstandard: "Custom",
+		tier: "CAP",
+	},
+	maractusmazah: {
+		isNonstandard: "Custom",
+		tier: "CAP",
+	},
 };

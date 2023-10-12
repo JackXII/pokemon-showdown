@@ -3863,4 +3863,19 @@ export const PokedexText: { [k: string]: PokedexText; } = {
 	geocorpion: {
 		name: "Geocorpion",
 	},
+	zeazaya: {
+		name: "Zea-Zaya",
+	},
+	zhusk: {
+		name: "Zhusk",
+	},
+	mayzmen: {
+		name: "Mayzmen",
+	},
+	blazea: {
+		name: "Blazea",
+	},
+	maractusmazah: {
+		name: "Maractus-Mazah",
+	},
 };
