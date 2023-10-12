@@ -20021,7 +20021,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: -21031,
 		types: ["Rock", "Fairy"],
 		baseStats: { hp: 65, atk: 65, def: 90, spa: 135, spd: 65, spe: 100 },
-		abilities: { 0: "Crystal Jaw" },
+		abilities: { 0: "Crystal Jaw", 1: "No Guard" },
 		heightm: 1.77,
 		weightkg: 405.9,
 		color: "Brown",
