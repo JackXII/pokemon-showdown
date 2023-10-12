@@ -20111,6 +20111,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		color: "Yellow",
 		evos: ["Mudsmache\u0301"],
 		eggGroups: ["Field"],
+		gen: 21,
 	}, 
 	mudsmache: {
 		name: "Mudsmache\u0301",
@@ -20123,6 +20124,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		color: "Yellow",
 		prevo: "Mudbray-Mazah",
 		eggGroups: ["Field"],
+		gen: 21,
 	},
 	maurios: {
 		num: -8001,
