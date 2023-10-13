@@ -2278,6 +2278,11 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		desc: "Phisycal move power is halved, Special move hit the defense instead of special defense.",
 		shortDesc: "Phisycal move power is halved, Special move hit the defense instead of special defense.",
 	},
-	
+	junglecamo: {
+		// Mazah
+		name: "Jungle Camo",
+		desc: "If Grassy Terrain is active, the accuracy of moves used against this Pokemon is multiplied by 0.8.",
+		shortDesc: "If Grassy Terrain is active, this Pokemon's evasiveness is 1.25x.",
+	}
 
 };

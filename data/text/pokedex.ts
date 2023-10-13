@@ -3884,4 +3884,11 @@ export const PokedexText: { [k: string]: PokedexText; } = {
 	mudsmache: {
 		name: "Mudsmache",
 	},
+	
+	meowthmazah: {
+		name: "Meowth-Mazah",
+	},
+	persianmazah: {
+		name: "Persian-Mazah",
+	},
 };

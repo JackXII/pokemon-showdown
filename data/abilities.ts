@@ -5535,7 +5535,7 @@ export const Abilities: { [abilityid: string]: AbilityData; } = {
 		onStart(pokemon) {
 			let activated = false;
 			if (!pokemon.abilityState.firstImpact) {
-				this.add('-ability', pokemon, 'First Impact', 'damage');
+				//this.add('-ability', pokemon, 'First Impact', 'damage');
 				for (const target of pokemon.adjacentFoes()) {
 					if (!activated) {
 						this.damage(target.baseMaxhp / 4, target, pokemon);
@@ -5599,10 +5599,24 @@ export const Abilities: { [abilityid: string]: AbilityData; } = {
 		onDamagingHit(damage, target, source, move) {
 			if (!target.hp) {
 				target.side.partyPopped = true;
-				this.damage(target.getUndynamaxedHP(damage), source, target);
+				this.add('-activate', target, 'ability: Party Popper');
 			}
 		},
 		rating: 3,
 		num: 2008,
+	},
+	junglecamo: {
+		name: "Jungle Camo",
+		onModifyAccuracyPriority: -1,
+		onModifyAccuracy(accuracy) {
+			if (typeof accuracy !== 'number') return;
+			if (this.field.isTerrain('grassyterrain')) {
+				this.debug('Jungle Camo - decreasing accuracy');
+				return this.chainModify([3277, 4096]);
+			}
+		},
+		isBreakable: true,
+		rating: 1.5,
+		num: 2009,
 	},
 };

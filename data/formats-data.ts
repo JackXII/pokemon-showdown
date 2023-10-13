@@ -6304,4 +6304,12 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Custom",
 		tier: "CAP",
 	},
+	meowthmazah: {
+		isNonstandard: "Custom",
+		tier: "CAP",
+	},
+	persianmazah: {
+		isNonstandard: "Custom",
+		tier: "CAP",
+	},
 };
