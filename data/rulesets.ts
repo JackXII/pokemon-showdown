@@ -2687,7 +2687,8 @@ export const Rulesets: { [k: string]: FormatData; } = {
 				"Chixulob", "Charcopal", "Geocorpion",
 				"Zea-Zaya", "Zhusk", "Mayzmen", "Blazea",
 				"Maractus-Mazah", "Mudbray-Mazah", "Mudsmache",
-				"Meowth-Mazah", "Persian-Mazah",
+				"Meowth-Mazah", "Persian-Mazah", "Gohila",
+				
 			];
 			const species = this.dex.species.get(set.species || set.name);
 			if (!mazahDex.includes(species.baseSpecies) && !mazahDex.includes(species.name) &&

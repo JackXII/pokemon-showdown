@@ -5619,4 +5619,19 @@ export const Abilities: { [abilityid: string]: AbilityData; } = {
 		rating: 1.5,
 		num: 2009,
 	},
+	radioactive: {
+		// Mazah
+		onTryHit(target, source, move) {
+			if (target !== source && (move.type === 'Electric' || move.type === 'Poison')) {
+				if (!this.heal(target.baseMaxhp / 4)) {
+					this.add('-immune', target, '[from] ability: Radioactive');
+				}
+				return null;
+			}
+		},
+		isBreakable: true,
+		name: "Radioactive",
+		rating: 4,
+		num: 10,
+	},
 };

@@ -2283,6 +2283,12 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Jungle Camo",
 		desc: "If Grassy Terrain is active, the accuracy of moves used against this Pokemon is multiplied by 0.8.",
 		shortDesc: "If Grassy Terrain is active, this Pokemon's evasiveness is 1.25x.",
+	},
+	radioactive: {
+		// Mazah
+		name: "Radioactive",
+		desc: "This Pokemon is immune to Electric-type and Poison-type moves and restores 1/4 of its maximum HP, rounded down, when hit by an Electric-type move.",
+		shortDesc: "This Pokemon heals 1/4 of its max HP when hit by Electric/Poison moves; Electric/Poison immunity.",
 	}
 
 };
