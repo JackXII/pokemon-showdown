@@ -6312,4 +6312,8 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Custom",
 		tier: "CAP",
 	},
+	gohila: {
+		isNonstandard: "Custom",
+		tier: "CAP",
+	},
 };

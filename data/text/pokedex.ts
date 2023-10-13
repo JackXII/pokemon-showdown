@@ -3891,4 +3891,7 @@ export const PokedexText: { [k: string]: PokedexText; } = {
 	persianmazah: {
 		name: "Persian-Mazah",
 	},
+	gohila: {
+		name: "Gohila",
+	},
 };
