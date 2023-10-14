@@ -6316,6 +6316,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Custom",
 		tier: "CAP",
 	},
+	gohilamega: {
+		isNonstandard: "Custom",
+		tier: "CAP",
+	},
 	bowllo: {
 		isNonstandard: "Custom",
 		tier: "CAP",
