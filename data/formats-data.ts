@@ -6316,4 +6316,12 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Custom",
 		tier: "CAP",
 	},
+	bowllo: {
+		isNonstandard: "Custom",
+		tier: "CAP",
+	},
+	dupedillo: {
+		isNonstandard: "Custom",
+		tier: "CAP",
+	},
 };

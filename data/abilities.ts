@@ -5558,10 +5558,10 @@ export const Abilities: { [abilityid: string]: AbilityData; } = {
 		// Mazah
 		name: "Crystal Jaw",
 		onModifyAtk(atk, attacker, defender, move) {
-				return this.chainModify(0.5);
+			return this.chainModify(0.5);
 		},
 		onTryMove(source, target, move) {
-			if(move.category === 'Special'){
+			if (move.category === 'Special') {
 				move.overrideDefensiveStat = 'def';
 			}
 		},
@@ -5574,7 +5574,7 @@ export const Abilities: { [abilityid: string]: AbilityData; } = {
 			const type = move.type;
 			const grass = 'Grass';
 			if (
-				target.isActive && move.effectType === 'Move' && type === 'Water' 
+				target.isActive && move.effectType === 'Move' && type === 'Water'
 				&& !target.hasType(grass)
 			) {
 				if (!target.setType(grass)) return false;
@@ -5632,6 +5632,139 @@ export const Abilities: { [abilityid: string]: AbilityData; } = {
 		isBreakable: true,
 		name: "Radioactive",
 		rating: 4,
-		num: 10,
+		num: 2010,
+	},
+	ballsaffinity: {
+		// Mazah, Jack-Made
+		name: "Ball's Affinity",
+		onStart(target) {
+			switch (target.item) {
+				case 'ultraball':
+					this.randomBoost(target);
+				case 'greatball':
+					this.randomBoost(target);
+				case 'pokeball':
+					this.randomBoost(target);
+					break;
+				case 'originball':
+					this.boost({ atk: 1, spa: 1, spd: 1, spe: 1 });
+				case 'masterball':
+					this.boost({ atk: 1, spa: 1, spd: 1, spe: 1 });
+					break;
+				case 'fastball':
+					if (target.hasType('Electric')) return false;
+					if (!target.addType('Electric')) return false;
+					this.add('-start', target, 'typeadd', 'Electric', '[from] ability: Ball\'s Affinity');
+					this.boost({ spe: 1 });
+					break;
+				case 'gigatonball':
+					target.weighthg = target.weighthg * 2;
+				case 'leadenball':
+					target.weighthg = target.weighthg * 2;
+				case 'heavyball':
+					target.weighthg = target.weighthg * 2;
+					break;
+				case 'netball':
+					if (target.hasType('Bug')) return false;
+					if (!target.addType('Bug')) return false;
+					this.add('-start', target, 'typeadd', 'Bug', '[from] ability: Ball\'s Affinity');
+					break;
+				case 'diveball':
+					if (target.hasType('Water')) return false;
+					if (!target.addType('Water')) return false;
+					this.add('-start', target, 'typeadd', 'Water', '[from] ability: Ball\'s Affinity');
+					break;
+				case 'sportball':
+					if (target.hasType('Fighting')) return false;
+					if (!target.addType('Fighting')) return false;
+					this.add('-start', target, 'typeadd', 'Fighting', '[from] ability: Ball\'s Affinity');
+					break;
+				case 'safariball':
+					if (target.hasType('Grass')) return false;
+					if (!target.addType('Grass')) return false;
+					this.add('-start', target, 'typeadd', 'Grass', '[from] ability: Ball\'s Affinity');
+					break;
+				case 'moonball':
+					if (target.hasType('Psychic')) return false;
+					if (!target.addType('Psychic')) return false;
+					this.add('-start', target, 'typeadd', 'Psychic', '[from] ability: Ball\'s Affinity');
+					break;
+				case 'duskball':
+					if (target.hasType('Dark')) return false;
+					if (!target.addType('Dark')) return false;
+					this.add('-start', target, 'typeadd', 'Dark', '[from] ability: Ball\'s Affinity');
+					break;
+				case 'nestball':
+					if (target.hasType('Normal')) return false;
+					if (!target.addType('Normal')) return false;
+					this.add('-start', target, 'typeadd', 'Normal', '[from] ability: Ball\'s Affinity');
+					break;
+				case 'lureball':
+					this.boost({ accuracy: 1, evasion: -1 });
+				case 'jetball':
+					this.boost({ spe: 1 });
+				case 'wingball':
+					this.boost({ spe: 1 });
+				case 'featherball':
+					if (target.hasType('Flying')) return false;
+					if (!target.addType('Flying')) return false;
+					this.add('-start', target, 'typeadd', 'Flying', '[from] ability: Ball\'s Affinity');
+					break;
+				case 'timerball':
+					if(this.field.getPseudoWeather('trickroom')){
+						this.field.removePseudoWeather('trickroom');
+					} else {
+						this.add('-fieldstart', 'ability: Ball\'s Affinity', '[of] ' + target);
+					}
+					break;
+				default:
+					break;
+			}
+		},
+		onFractionalPriorityPriority: -2,
+		onFractionalPriority(priority, pokemon, target, move) {
+			if (priority <= 0 && this.randomChance(4, 5) && pokemon.item === 'quickball') {
+				this.add('-activate', pokemon, 'ability: Ball\'s Affinity');
+				return 0.1;
+			}
+		},
+		onChargeMove(pokemon, target, move) {
+			if (move.name === 'dive' && pokemon.item === 'diveball') {
+				this.debug('ball\'s affinity - remove charge turn for ' + move.id);
+				this.attrLastMove('[still]');
+				this.addMove('-anim', pokemon, move.name, target);
+				return false; // skip charge turn
+			}
+		},
+		onSourceDamagingHit(damage, target, source, move) {
+			if (!(source.item === 'dreamball')) return;
+			// Despite not being a secondary, Shield Dust / Covert Cloak block Toxic Chain's effect
+			if (target.hasAbility('shielddust') || target.hasItem('covertcloak')) return;
+			if (this.randomChance(3, 10)) {
+				target.trySetStatus('slp', source);
+			}
+		},
+		onSourceAfterFaint(length, target, source, effect) {
+			if (effect && effect.effectType === 'Move' && source.item === 'beastball') {
+				const bestStat = source.getBestStat(true, true);
+				this.boost({ [bestStat]: length }, source);
+			}
+		},
+		onDamagingHit(damage, target, source, move) {
+			if (target.item === 'loveball' && this.checkMoveMakesContact(move, source, target)) {
+				if (this.randomChance(3, 10)) {
+					source.addVolatile('attract', this.effectState.target);
+				}
+			}
+		},
+		onAnyModifyDamage(damage, source, target, move) {
+			if (this.effectState.target.item === 'friendball' && target !== this.effectState.target && target.isAlly(this.effectState.target)) {
+				this.debug('Ball\'s Affinity weaken');
+				return this.chainModify(0.75);
+			}
+		},
+		isBreakable: true,
+		rating: 4,
+		num: 2011,
 	},
 };

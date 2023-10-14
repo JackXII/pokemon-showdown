@@ -3099,4 +3099,13 @@ export class Battle {
 		// in case the garbage collector really sucks, at least deallocate the log
 		(this as any).log = [];
 	}
+
+	randomBoost(target: Pokemon){
+		const boost: SparseBoostsTable = {};
+		let stats: BoostID[] = ['accuracy', 'evasion', 'atk', 'def', 'spa', 'spd', 'spe'];
+		let randomStat: BoostID | undefined = stats.length ? this.sample(stats) : undefined;
+		randomStat = stats.length ? this.sample(stats) : undefined;
+		if (randomStat) boost[randomStat] = 1;
+		this.boost(boost, target, target);
+	};
 }

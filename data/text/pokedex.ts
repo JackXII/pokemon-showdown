@@ -3894,4 +3894,10 @@ export const PokedexText: { [k: string]: PokedexText; } = {
 	gohila: {
 		name: "Gohila",
 	},
+	bowllo: {
+		name: "Bowllo",
+	},
+	dupedillo: {
+		name: "Dupedillo",
+	},
 };

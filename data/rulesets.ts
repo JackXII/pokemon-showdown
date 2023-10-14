@@ -2688,6 +2688,7 @@ export const Rulesets: { [k: string]: FormatData; } = {
 				"Zea-Zaya", "Zhusk", "Mayzmen", "Blazea",
 				"Maractus-Mazah", "Mudbray-Mazah", "Mudsmache",
 				"Meowth-Mazah", "Persian-Mazah", "Gohila",
+				"Bowllo", "Dupedillo",
 				
 			];
 			const species = this.dex.species.get(set.species || set.name);
